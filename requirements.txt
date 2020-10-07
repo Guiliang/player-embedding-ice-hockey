@@ -1,0 +1,9 @@
+scipy==1.0.1
+tensorflow-gpu==1.15
+numpy==1.16.6
+PyYAML==3.13
+matplotlib==2.2.2
+scikit-learn==0.19.1
+
+
+

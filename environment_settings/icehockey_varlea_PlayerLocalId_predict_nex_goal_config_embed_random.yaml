@@ -1,0 +1,55 @@
+Learn:
+  keep_prob : 0.9
+  learning_rate : 0.00001
+  number_of_total_game: 1130
+  batch_size: 32
+  max_seq_length: 10
+  save_mother_dir: "/Local-Scratch"
+  feature_type: "V1"
+  iterate_num: 100
+  model_type: 'normal'
+  number_of_total_game: 1202
+  action_number : 33
+  gamma : 1
+  data_name: 'ice_hockey-2019'
+  sport : 'Ice-Hockey'
+  predict_target : 'PlayerLocalId'
+  player_Id_style: 'PlayerId'
+  position_max_length : 15
+  apply_stochastic: True
+  apply_box_score: False
+  diff_apply_rl: True
+  apply_pid: False
+  integral_update_flag: True
+  rnn_skip_player: False
+  embed_mode : 'random'
+  skip_first_kl: False
+  add_sarsa: False
+
+Arch:
+  CLVRNN:
+    hidden_dim : 256
+    latent_s_dim : 64
+    latent_a_dim : 64
+    latent_r_dim : 32
+    x_dim : 150 # playerId dimension
+    y_a_dim: 27 # 27action
+    y_s_dim : 43 # 12state+31team
+    y_r_dim: 1 # 1/0 reward
+  SARSA:
+    lstm_layer_num : 2
+    h_size : 256
+    dense_layer_number : 2
+    dense_layer_size : 256
+  WIN:
+    lstm_layer_num : 2
+    h_size : 256
+    dense_layer_number : 2
+    dense_layer_size : 256
+  Predict:
+    lstm_layer_num : 2
+    h_size : 256
+    dense_layer_number : 2
+    dense_layer_size : 256
+    output_size : 2
+    predict_target: 'ActionGoal'
