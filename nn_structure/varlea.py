@@ -1,6 +1,9 @@
 import tensorflow as tf
 
 def linear(input_, output_size, scope=None, stddev=0.02, bias_start=0.0, with_w=False):
+    """
+    implementing a linear layer
+    """
     shape = input_.get_shape().as_list()
 
     with tf.variable_scope(scope or "Linear"):
@@ -92,6 +95,9 @@ class LadderVariationalRNNCell(tf.contrib.rnn.RNNCell):
         return z_p, mu, sigma
 
     def __call__(self, input, state, scope="clvrnn", inherit_upper_post=False):
+        """
+        Implementing the neural function
+        """
 
         def cvae_layer(input, condition, n_h, n_z, is_train):
             with tf.variable_scope("cond_input"):

@@ -370,6 +370,9 @@ def run_network(sess, model, config, log_dir, save_network_dir,
                 training_dir_games_all, testing_dir_games_all,
                 data_store, source_data_dir, player_id_cluster_dir,
                 training_file=None):
+    """
+    running training for cvrnn
+    """
     game_number = 0
     converge_flag = False
     saver = tf.train.Saver(max_to_keep=300)

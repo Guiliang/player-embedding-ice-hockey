@@ -43,6 +43,9 @@ def gathering_data_and_run(dir_game, config, player_id_cluster_dir,
                            pred_target_data_all=None,
                            pred_output_prob_all=None,
                            ):
+    """
+    building training data and train the model
+    """
     if validate_variance_flag:
         match_q_values_players_dict = {}
         for i in range(config.Learn.player_cluster_number):
@@ -356,6 +359,9 @@ def run_network(sess, model, config, log_dir, save_network_dir,
                 training_dir_games_all, testing_dir_games_all,
                 data_store, source_data_dir, player_id_cluster_dir,
                 load_network_dir=None, training_file=None):
+    """
+    Training VaRLEA
+    """
     game_number = 0
     converge_flag = False
     saver = tf.train.Saver(max_to_keep=300)

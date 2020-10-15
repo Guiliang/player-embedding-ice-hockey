@@ -1,4 +1,4 @@
-# player-embedding-ice-hockey (Updating...)
+# player-embedding-ice-hockey
 
 
 My code is based on `python 2`. Check [requirements.txt](./requirements.txt) for a detail introduction to the python packages.
