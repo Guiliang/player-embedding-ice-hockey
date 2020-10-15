@@ -11,8 +11,8 @@ This work applies the play-by-play data from [Sportlogiq](https://sportlogiq.com
 
 ## Model Training
 In the following training file should specify:
-source_data_dir # you source data (before pre-preprocessing)
-data_store_dir # your training data (after pre-preprocessing)
+1. source_data_dir # you source data (before pre-preprocessing)
+2. data_store_dir # your training data (after pre-preprocessing)
 
 ### VaRLEA Training
 + The implementation of VaRLEA model is [varlea](./nn_structure/varlea.py).
